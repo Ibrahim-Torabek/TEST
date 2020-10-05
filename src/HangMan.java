@@ -54,7 +54,7 @@ public class HangMan {
         // Check existence
         for(int i = 0; i < userWord.length; i++){
             if (userWord[i] == userInput) {
-                missed++;
+
                 return -1;
             }
         }
@@ -73,8 +73,10 @@ public class HangMan {
                 remain++;
         }
 
-        if(guessed == selectedWord.length - remain)
+        if(guessed == selectedWord.length - remain) {
+            missed++;
             return 0;
+        }
 
         guessed = selectedWord.length - remain;
 

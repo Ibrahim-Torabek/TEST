@@ -22,12 +22,25 @@ public class Main extends Application {
 
                 guess = hangMan.checkWord(userInput);
 
-                if (guess == -1) {
-                    System.out.println(userInput + " is already in the word");
-                    continue;
+//                if (guess == -1) {
+//                    System.out.println(userInput + " is already in the word");
+//                    continue;
+//
+//                } else if (guess == 0) {
+//                    System.out.println(userInput + " is not in the word.");
+//                }
 
-                } else if (guess == 0) {
-                    System.out.println(userInput + " is not in the word.");
+                switch (guess){
+                    case 1:
+                        System.out.println("You guessed a letter: " + userInput);
+                        break;
+
+                    case 0:
+                        System.out.println(userInput + " is not in the word.");
+                        break;
+
+                    case -1:
+                        System.out.println(userInput + " is already in the word");
                 }
             } while (hangMan.getStatus());
 
@@ -41,6 +54,8 @@ public class Main extends Application {
         } while (userInput == 'y');
 
         s.close();
+
+        System.exit(0);
 
         //Application.launch(args);
     }

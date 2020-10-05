@@ -22,13 +22,6 @@ public class Main extends Application {
 
                 guess = hangMan.checkWord(userInput);
 
-//                if (guess == -1) {
-//                    System.out.println(userInput + " is already in the word");
-//                    continue;
-//
-//                } else if (guess == 0) {
-//                    System.out.println(userInput + " is not in the word.");
-//                }
 
                 switch (guess){
                     case 1:
